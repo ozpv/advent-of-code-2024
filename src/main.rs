@@ -5,7 +5,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let begin = Instant::now();
 
     {
-        day_01::solution()?;
+        day_01::solution_part_two();
     }
 
     let end = begin.elapsed();
