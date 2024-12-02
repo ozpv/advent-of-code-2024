@@ -74,7 +74,7 @@ pub fn solution_part_two() {
     r.iter().for_each(|n| *freq.entry(*n).or_insert(0) += 1);
 
     let sum = l.iter().fold(0, |mut sum, n| {
-        freq.contains_key(n).then(|| sum += n * freq[&n]);
+        freq.contains_key(n).then(|| sum += n * freq[n]);
         sum
     });
 
