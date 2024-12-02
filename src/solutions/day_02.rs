@@ -85,11 +85,9 @@ pub fn solution_part_two() {
     for list in p {
         for ns in list.windows(3) {
             // previous current next
-            // extract the i32 from the slice
-            // I know this sucks
-            let p = &ns[0..1].iter().sum::<i32>();
-            let c = &ns[1..2].iter().sum::<i32>();
-            let n = &ns[2..].iter().sum::<i32>();
+            let p = &ns[0];
+            let c = &ns[1];
+            let n = &ns[2];
 
             // previous current
             let pc = p.cmp(c);
