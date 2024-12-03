@@ -21,7 +21,6 @@ pub fn parse(list: Vec<String>, col: &Column) -> Vec<i32> {
         .collect::<Vec<i32>>()
 }
 
-#[allow(dead_code)]
 pub fn solution_part_one() {
     let inputs = File::open("./src/inputs/day_01.txt").expect("input to exist");
     let buf = BufReader::new(inputs);
