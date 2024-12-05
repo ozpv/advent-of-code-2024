@@ -69,8 +69,10 @@ pub fn solution_part_two() {
             let cy = cy as isize;
             let diag_1 = {
                 let (Some(l), Some(r)) = (
-                    p.get((cx + 1) as usize).and_then(|col| col.get((cy + 1) as usize)),
-                    p.get((cx - 1) as usize).and_then(|col| col.get((cy - 1) as usize)),
+                    p.get((cx + 1) as usize)
+                        .and_then(|col| col.get((cy + 1) as usize)),
+                    p.get((cx - 1) as usize)
+                        .and_then(|col| col.get((cy - 1) as usize)),
                 ) else {
                     continue;
                 };
@@ -78,8 +80,10 @@ pub fn solution_part_two() {
             };
             let diag_2 = {
                 let (Some(l), Some(r)) = (
-                    p.get((cx - 1) as usize).and_then(|col| col.get((cy + 1) as usize)),
-                    p.get((cx + 1) as usize).and_then(|col| col.get((cy - 1) as usize)),
+                    p.get((cx - 1) as usize)
+                        .and_then(|col| col.get((cy + 1) as usize)),
+                    p.get((cx + 1) as usize)
+                        .and_then(|col| col.get((cy - 1) as usize)),
                 ) else {
                     continue;
                 };
